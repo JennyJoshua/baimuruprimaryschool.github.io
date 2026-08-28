@@ -1,234 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baimuru Primary School</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f7f5;
-        }
-
-        header {
-            background-color: #155724;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-        }
-
-        nav {
-            background-color: #0b3d20;
-            text-align: center;
-            padding: 12px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background-color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .hero h2 {
-            color: #155724;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 1.1rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            color: #155724;
-            margin-bottom: 30px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            color: #155724;
-            margin-bottom: 10px;
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background-color: #155724;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #0b3d20;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 700px) {
-            header h1 {
-                font-size: 1.7rem;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px 8px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baimuru Primary School — Gulf Province, PNG</title>
+<meta name="description" content="Official public information website of Baimuru Primary School, Gulf Province, Papua New Guinea. Newsletters, financial reports, policies and forms.">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <h1>Baimuru Primary School</h1>
-        <p>Gulf Province, Papua New Guinea</p>
-    </header>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="school-crest" aria-hidden="true">BPS</div>
+    <div class="header-text">
+      <h1>Baimuru Primary School</h1>
+      <p>Gulf Province, Papua New Guinea</p>
+    </div>
+  </div>
+</header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">About</a>
-        <a href="#">News</a>
-        <a href="#">Newsletter</a>
-        <a href="#">Finance</a>
-        <a href="#">Policies</a>
-        <a href="#">Downloads</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav class="main-nav" aria-label="Main navigation">
+  <button class="nav-toggle" aria-expanded="false">Menu ☰</button>
+  <div class="nav-inner">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="finance.html">Financial Reports</a>
+    <a href="policies.html">School Policies</a>
+    <a href="downloads.html">Forms &amp; Downloads</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,40 350,0 600,20 C850,40 1050,0 1200,20 L1200,0 L0,0 Z" fill="#0e3320"></path></svg>
+</div>
 
-    <section class="hero">
-        <h2>Welcome to Baimuru Primary School</h2>
-        <p>
-            Welcome to the official public information website of
-            Baimuru Primary School. This website provides information
-            about our school, news and announcements, newsletters,
-            financial reports, school policies, forms and other
-            documents available to our school community and the public.
-        </p>
-    </section>
+<main id="main">
 
-    <section class="container">
+  <section class="hero">
+    <h2>Welcome to Baimuru Primary School</h2>
+    <p>
+      Baimuru Primary School serves students, families and the wider community
+      on the Purari River in Gulf Province. This website is our public
+      information portal — the home for school news, quarterly newsletters,
+      financial reports, approved policies, and downloadable forms.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="newsletter.html">Latest Newsletter</a>
+      <a class="btn btn-outline" href="finance.html">Financial Reports</a>
+      <a class="btn btn-outline" href="downloads.html">Forms &amp; Downloads</a>
+    </div>
+  </section>
 
-        <h2 class="section-title">School Information</h2>
+  <div class="container">
+    <span class="eyebrow">Head Teacher's Message</span>
+    <h2 class="section-title">A note from the Head Teacher</h2>
+    <p class="section-intro">
+      On behalf of the staff and School Board, welcome to our school website.
+      We built this page to make it easier for parents, guardians and our
+      community to stay informed and to access school documents at any time —
+      no office visit required. <em>— Jenny Joshua, Head Teacher</em>
+    </p>
+  </div>
 
-        <div class="cards">
+  <div class="container">
+    <span class="eyebrow">Explore</span>
+    <h2 class="section-title">School Information</h2>
+    <p class="section-intro">Everything on this site is organised into the sections below.</p>
 
-            <div class="card">
-                <h3>About Our School</h3>
-                <p>
-                    Learn about Baimuru Primary School, our history,
-                    vision, mission, staff and school community.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
+    <div class="cards">
+      <div class="card">
+        <h3>About Our School</h3>
+        <p>Our history, vision and mission, school leadership, staff and facilities.</p>
+        <a class="btn btn-outline" href="about.html">Learn More</a>
+      </div>
+      <div class="card">
+        <h3>News &amp; Announcements</h3>
+        <p>Notices, events, achievements and term updates from the school.</p>
+        <a class="btn btn-outline" href="news.html">View News</a>
+      </div>
+      <div class="card">
+        <h3>Newsletter</h3>
+        <p>Read and download our quarterly newsletters, current and past.</p>
+        <a class="btn btn-outline" href="newsletter.html">View Newsletters</a>
+      </div>
+      <div class="card">
+        <h3>Financial Reports</h3>
+        <p>Public accountability documents, by term and by year.</p>
+        <a class="btn btn-outline" href="finance.html">View Reports</a>
+      </div>
+      <div class="card">
+        <h3>School Policies</h3>
+        <p>Our approved governance and operational policies, by category.</p>
+        <a class="btn btn-outline" href="policies.html">View Policies</a>
+      </div>
+      <div class="card">
+        <h3>Forms &amp; Downloads</h3>
+        <p>Enrolment, transfer and general forms for parents and community.</p>
+        <a class="btn btn-outline" href="downloads.html">View Downloads</a>
+      </div>
+    </div>
+  </div>
 
-            <div class="card">
-                <h3>News & Announcements</h3>
-                <p>
-                    Find the latest school announcements, events,
-                    achievements and important notices.
-                </p>
-                <a href="#">View News</a>
-            </div>
+  <div class="container">
+    <span class="eyebrow">Notices</span>
+    <h2 class="section-title">Latest Announcements</h2>
+    <div class="notice">
+      <span class="date">Sample entry — edit or remove in news.html</span>
+      <h3>Term dates and enrolment notice</h3>
+      <p>Replace this notice with your school's current announcement. See the Maintenance Guide for how.</p>
+    </div>
+  </div>
 
-            <div class="card">
-                <h3>School Newsletter</h3>
-                <p>
-                    Read and download the school's quarterly
-                    newsletters and previous editions.
-                </p>
-                <a href="#">View Newsletters</a>
-            </div>
+</main>
 
-            <div class="card">
-                <h3>Financial Reports</h3>
-                <p>
-                    Access financial reports and other public
-                    accountability documents.
-                </p>
-                <a href="#">View Reports</a>
-            </div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Baimuru Primary School</h4>
+      <p>Baimuru Station, Kikori District<br>Gulf Province, Papua New Guinea</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="newsletter.html">Newsletters</a></p>
+      <p><a href="finance.html">Financial Reports</a></p>
+      <p><a href="policies.html">School Policies</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="contact.html">Get in touch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Baimuru Primary School. All rights reserved.</div>
+</footer>
 
-            <div class="card">
-                <h3>School Policies</h3>
-                <p>
-                    Access approved school policies and governance
-                    documents available to the public.
-                </p>
-                <a href="#">View Policies</a>
-            </div>
-
-            <div class="card">
-                <h3>Forms & Downloads</h3>
-                <p>
-                    Download forms, reports, notices and other
-                    documents provided by the school.
-                </p>
-                <a href="#">View Downloads</a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Baimuru Primary School. All rights reserved.</p>
-        <p>Gulf Province, Papua New Guinea</p>
-    </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
