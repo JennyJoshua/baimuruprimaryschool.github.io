@@ -1,0 +1,50 @@
+baimurupprimary.github.io/
+│
+├── index.html              ← Home page
+├── about.html
+├── news.html
+├── newsletter.html
+├── finance.html
+├── policies.html
+├── downloads.html
+├── contact.html
+├── README.md               ← your maintenance guide
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── images/
+│   └── (school logo, photos, etc.)
+│
+└── documents/
+    ├── newsletters/
+    │   ├── 2026-q1.pdf
+    │   ├── 2026-q2.pdf
+    │   ├── 2026-q3.pdf
+    │   └── 2026-q4.pdf
+    │
+    ├── finance/
+    │   ├── 2026-term1.pdf
+    │   ├── 2026-term2.pdf
+    │   ├── 2026-term3.pdf
+    │   ├── 2026-term4.pdf
+    │   ├── 2026-annual.pdf
+    │   ├── board-report.pdf
+    │   ├── classroom-project.pdf
+    │   └── fundraising-report.pdf
+    │
+    ├── policies/
+    │   ├── school-constitution.pdf
+    │   ├── student-discipline.pdf
+    │   ├── child-protection.pdf
+    │   └── (one PDF per policy — see policies.html for full list)
+    │
+    └── forms/
+        ├── enrolment-form.pdf
+        ├── transfer-form.pdf
+        ├── parent-info-form.pdf
+        ├── leave-form.pdf
+        └── meeting-minutes.pdf
