@@ -70,6 +70,54 @@ vision/mission, staff names, phone/email, and the contact form's
 information. Sample "coming soon" newsletter/report links can be
 deleted once real PDFs are uploaded.
 
+## E-Library (Phase 1 — static, public, no accounts)
+
+The E-Library is a separate section: `elibrary.html`, `elibrary-browse.html`,
+`elibrary-list.html`, `elibrary-resource.html`, `elibrary-reader.html`,
+plus `js/elibrary.js` and the catalogue file
+`documents/elibrary/resources.json`.
+
+**Important limits of this version, because GitHub Pages is free static
+hosting with no server:**
+- There is no login and no admin panel. Anything listed in the catalogue
+  is visible to anyone with the link — do not add a resource unless it's
+  genuinely fine for the public to see.
+- Only add PDFs the school has the right to host (school-created
+  material, public-domain works, openly licensed/OER content, or
+  material with clear permission). For anything else, use a "Curated
+  External Resource" entry that links out instead of hosting the file —
+  see the `external-intro-to-space` example in `resources.json`.
+- The reader opens PDFs using the browser's own built-in PDF viewer
+  (via an embedded frame), so no extra library needs to be downloaded —
+  this keeps pages light for slow connections.
+
+### Adding a new resource (no coding needed)
+
+1. Upload the PDF into the right folder under `documents/elibrary/`
+   (create a new subfolder there if it doesn't fit an existing one,
+   e.g. `documents/elibrary/science/`).
+2. Open `documents/elibrary/resources.json` in GitHub, click the
+   pencil (✏️) **Edit** icon.
+3. Copy one existing entry (the text between `{` and `}` inside the
+   `"resources"` list), paste it as a new entry, and add a comma after
+   the entry before it.
+4. Update the fields: `id` (unique, no spaces — use dashes), `title`,
+   `type`, `grades`, `subjects`, `collections`, `author`, `year`,
+   `description`, `filePath` (matching where you uploaded the PDF),
+   `fileSizeMB`, and `rightsStatus`.
+5. For an external (linked, not hosted) resource, set
+   `"hostType": "external"` and fill in `"externalUrl"` instead of
+   `filePath`.
+6. Click **Commit changes**. The new resource appears automatically
+   in Browse, Search, and any list matching its grade/subject/
+   collection — no other file needs to change.
+
+### Removing or updating a resource
+
+Edit or delete its entry in `resources.json` the same way. Deleting
+the JSON entry removes it from the library even if the PDF file is
+still sitting in the folder.
+
 ## Optional next steps
 
 - Add a real school logo image in `images/` and swap it in for the

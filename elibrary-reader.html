@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reader | E-Library | Baimuru Primary School</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="lib-reader-bar">
+  <a class="back" href="elibrary.html">&larr; E-Library</a>
+  <h2 id="lib-reader-title">Loading…</h2>
+  <div class="lib-reader-tools">
+    <a id="lib-reader-open" href="#" target="_blank" rel="noopener">Open in New Tab</a>
+    <a id="lib-reader-download" href="#">Download</a>
+    <button id="lib-reader-fullscreen" type="button">Full Screen</button>
+  </div>
+</div>
+
+<div id="lib-reader" class="lib-reader-frame-wrap">
+  <iframe id="lib-reader-frame" title="Resource reader" src=""></iframe>
+  <div class="lib-reader-error">
+    <p>This resource could not be loaded. It may not have been uploaded yet.</p>
+    <p><a href="elibrary.html">Return to the E-Library</a></p>
+  </div>
+</div>
+
+<script src="js/elibrary.js"></script>
+</body>
+</html>

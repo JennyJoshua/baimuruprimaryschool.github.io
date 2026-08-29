@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Library | Baimuru Primary School</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="school-crest" aria-hidden="true">BPS</div>
+    <div class="header-text">
+      <h1>Baimuru Primary School</h1>
+      <p>Gulf Province, Papua New Guinea</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav" aria-label="Main navigation">
+  <button class="nav-toggle" aria-expanded="false">Menu ☰</button>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="elibrary.html" aria-current="page">E-Library</a>
+    <a href="finance.html">Financial Reports</a>
+    <a href="policies.html">School Policies</a>
+    <a href="downloads.html">Forms &amp; Downloads</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,40 350,0 600,20 C850,40 1050,0 1200,20 L1200,0 L0,0 Z" fill="#0e3320"></path></svg>
+</div>
+
+<main id="main">
+
+  <section class="lib-hero">
+    <h2>Baimuru Primary School Digital Library</h2>
+    <p class="tagline">LEARN • READ • DISCOVER</p>
+    <form class="lib-search" id="lib-home-search">
+      <label for="lib-home-search-input" class="sr-only" style="position:absolute;left:-9999px;">Search the library</label>
+      <input id="lib-home-search-input" type="search" placeholder="Search books, subjects, topics…">
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <div class="container">
+    <span class="eyebrow">Browse</span>
+    <h2 class="section-title">Find What You're Looking For</h2>
+    <div class="lib-browse-grid">
+      <a class="lib-browse-tile" href="elibrary-browse.html#grades">
+        <h3>Grades</h3>
+        <p>Browse resources by Grade 3 to Grade 6.</p>
+      </a>
+      <a class="lib-browse-tile" href="elibrary-browse.html#subjects">
+        <h3>Subjects</h3>
+        <p>English, Mathematics, Science and more.</p>
+      </a>
+      <a class="lib-browse-tile" href="elibrary-browse.html#collections">
+        <h3>Collections</h3>
+        <p>PNG Curriculum, World Knowledge, Reading Library and more.</p>
+      </a>
+      <a class="lib-browse-tile" href="elibrary-browse.html#types">
+        <h3>Resource Types</h3>
+        <p>Textbooks, story books, journals, teacher guides.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <span class="eyebrow">Featured</span>
+    <h2 class="section-title">Featured Resources</h2>
+    <div class="lib-grid" id="lib-featured"><p class="lib-empty">Loading…</p></div>
+  </div>
+
+  <div class="container">
+    <span class="eyebrow">New</span>
+    <h2 class="section-title">Recently Added</h2>
+    <div class="lib-grid" id="lib-recent"><p class="lib-empty">Loading…</p></div>
+  </div>
+
+  <div class="container">
+    <span class="eyebrow">Explore</span>
+    <h2 class="section-title">More to Explore</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reading Library</h3>
+        <p>Story books and reading-level books for every grade.</p>
+        <a class="btn btn-outline" href="elibrary-list.html?collection=Reading%20Library">Browse</a>
+      </div>
+      <div class="card">
+        <h3>Explore the World</h3>
+        <p>Science, geography and general knowledge from PNG and beyond.</p>
+        <a class="btn btn-outline" href="elibrary-list.html?collection=World%20Knowledge">Browse</a>
+      </div>
+      <div class="card">
+        <h3>For Teachers</h3>
+        <p>Lesson plans and teaching resources for staff.</p>
+        <a class="btn btn-outline" href="elibrary-list.html?collection=Teacher%20Resource%20Centre">Browse</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <span class="eyebrow">About the Library</span>
+    <h2 class="section-title">Help &amp; About</h2>
+    <p class="section-intro">
+      This library brings together PNG curriculum resources, school-created
+      materials, and open, legally shareable books and reference material
+      from the Pacific and around the world. New resources are added
+      regularly by the school. If a resource does not open correctly,
+      please let the school office know.
+    </p>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Baimuru Primary School</h4>
+      <p>Baimuru Station, Kikori District<br>Gulf Province, Papua New Guinea</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="elibrary.html">E-Library</a></p>
+      <p><a href="newsletter.html">Newsletters</a></p>
+      <p><a href="finance.html">Financial Reports</a></p>
+      <p><a href="policies.html">School Policies</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="contact.html">Get in touch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Baimuru Primary School. All rights reserved.</div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/elibrary.js"></script>
+</body>
+</html>
