@@ -983,3 +983,21 @@ footer.site-footer {
   font-size: 1rem;
   margin-bottom: 10px;
 }
+
+/* Footer social icon link */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  color: #d9e6da;
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.footer-social:hover { text-decoration: underline; }
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--gold);
+  flex-shrink: 0;
+}
