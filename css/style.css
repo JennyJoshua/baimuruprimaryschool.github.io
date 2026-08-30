@@ -857,3 +857,129 @@ footer.site-footer {
   .policy-toc { border: 1px solid #ccc; }
   .policy-body section { border-bottom: none; page-break-inside: avoid; }
 }
+
+.policy-approval {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-top: 14px;
+}
+.policy-approval h4 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.policy-approval dl {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 6px 14px;
+  font-size: 0.9rem;
+}
+.policy-approval dt { font-weight: 700; color: var(--forest-light); }
+.policy-approval dd {
+  border-bottom: 1px dashed var(--line);
+  min-height: 1.3em;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 20px;
+  font-size: 0.9rem;
+}
+.policy-table th, .policy-table td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+}
+.policy-table th {
+  background: var(--forest);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: normal;
+}
+
+/* =========================================================
+   App tools (Lesson Planner, Test Generator)
+   ========================================================= */
+
+.tool-intro {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--river);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 26px;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.tool-form {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+}
+.tool-field label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--forest);
+  margin-bottom: 5px;
+}
+.tool-field input,
+.tool-field select,
+.tool-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--paper);
+}
+.tool-field textarea { min-height: 80px; resize: vertical; }
+.tool-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) { .tool-row { grid-template-columns: 1fr; } }
+
+.tool-output-wrap {
+  display: none;
+  margin-top: 30px;
+}
+.tool-output-wrap h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.tool-output {
+  width: 100%;
+  min-height: 220px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: var(--paper);
+}
+.tool-output-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.tool-ai-links {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.tool-ai-links h4 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
