@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson Planner | Apps | Baimuru Primary School</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="school-crest" aria-hidden="true">BPS</div>
+    <div class="header-text">
+      <h1>Baimuru Primary School</h1>
+      <p>Gulf Province, Papua New Guinea</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav" aria-label="Main navigation">
+  <button class="nav-toggle" aria-expanded="false">Menu ☰</button>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="elibrary.html">E-Library</a>
+    <a href="finance.html">Financial Reports</a>
+    <a href="policies.html">School Policies</a>
+    <a href="downloads.html">Forms &amp; Downloads</a>
+    <a href="apps.html" aria-current="page">Apps</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,40 350,0 600,20 C850,40 1050,0 1200,20 L1200,0 L0,0 Z" fill="#0e3320"></path></svg>
+</div>
+
+<main id="main">
+  <div class="container">
+    <p><a href="apps.html">&larr; Apps</a></p>
+    <span class="eyebrow">For Teachers</span>
+    <h2 class="section-title">Lesson Planner</h2>
+
+    <div class="tool-intro">
+      This tool does not generate the lesson plan itself. Fill in the details below, click <strong>Build Prompt</strong>, then copy the text and paste it into an AI assistant such as Claude or ChatGPT to get your draft lesson plan.
+    </div>
+
+    <form class="tool-form" id="lp-form" onsubmit="return false;">
+      <div class="tool-row">
+        <div class="tool-field">
+          <label for="lp-grade">Grade</label>
+          <select id="lp-grade">
+            <option>Grade 3</option>
+            <option>Grade 4</option>
+            <option selected>Grade 5</option>
+            <option>Grade 6</option>
+            <option>Multi-grade</option>
+          </select>
+        </div>
+        <div class="tool-field">
+          <label for="lp-subject">Subject</label>
+          <select id="lp-subject">
+            <option>English</option>
+            <option>Mathematics</option>
+            <option selected>Science</option>
+            <option>Social Science</option>
+            <option>Health</option>
+            <option>Physical Education</option>
+            <option>Arts</option>
+            <option>Technology</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tool-field">
+        <label for="lp-topic">Topic</label>
+        <input id="lp-topic" type="text" placeholder="e.g. Life cycle of a frog">
+      </div>
+
+      <div class="tool-row">
+        <div class="tool-field">
+          <label for="lp-duration">Lesson Duration</label>
+          <select id="lp-duration">
+            <option>30 minutes</option>
+            <option selected>40 minutes</option>
+            <option>60 minutes</option>
+            <option>Double period (80 minutes)</option>
+          </select>
+        </div>
+        <div class="tool-field">
+          <label for="lp-classsize">Class Size (optional)</label>
+          <input id="lp-classsize" type="text" placeholder="e.g. 32 students">
+        </div>
+      </div>
+
+      <div class="tool-field">
+        <label for="lp-objectives">Learning Objectives (optional)</label>
+        <textarea id="lp-objectives" placeholder="What should students be able to do by the end of the lesson?"></textarea>
+      </div>
+
+      <div class="tool-field">
+        <label for="lp-notes">Other Notes (optional)</label>
+        <textarea id="lp-notes" placeholder="e.g. limited materials available, mixed-ability class, local context to include"></textarea>
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary" onclick="lpBuildPrompt()">Build Prompt</button>
+      </div>
+    </form>
+
+    <div class="tool-output-wrap" id="lp-output-wrap">
+      <h3>Your Prompt</h3>
+      <textarea class="tool-output" id="lp-output" readonly></textarea>
+      <div class="tool-output-actions">
+        <button class="btn btn-outline" id="lp-copy-btn" onclick="toolCopy('lp-output','lp-copy-btn')">Copy Prompt</button>
+      </div>
+
+      <div class="tool-ai-links">
+        <h4>Paste it into an AI assistant</h4>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a>
+          <a class="btn btn-outline" href="https://chat.openai.com" target="_blank" rel="noopener">Open ChatGPT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Baimuru Primary School</h4>
+      <p>Baimuru Station, Kikori District<br>Gulf Province, Papua New Guinea</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="elibrary.html">E-Library</a></p>
+      <p><a href="newsletter.html">Newsletters</a></p>
+      <p><a href="finance.html">Financial Reports</a></p>
+      <p><a href="policies.html">School Policies</a></p>
+      <p><a href="apps.html">Apps</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="contact.html">Get in touch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Baimuru Primary School. All rights reserved.</div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/apps.js"></script>
+<script>
+function lpBuildPrompt() {
+  var grade = document.getElementById("lp-grade").value;
+  var subject = document.getElementById("lp-subject").value;
+  var topic = document.getElementById("lp-topic").value.trim() || "[add your topic]";
+  var duration = document.getElementById("lp-duration").value;
+  var classSize = document.getElementById("lp-classsize").value.trim();
+  var objectives = document.getElementById("lp-objectives").value.trim();
+  var notes = document.getElementById("lp-notes").value.trim();
+
+  var lines = [];
+  lines.push("You are helping a primary school teacher in Papua New Guinea plan a lesson.");
+  lines.push("");
+  lines.push("Write a lesson plan with these details:");
+  lines.push("- Grade: " + grade);
+  lines.push("- Subject: " + subject);
+  lines.push("- Topic: " + topic);
+  lines.push("- Lesson duration: " + duration);
+  if (classSize) lines.push("- Class size: " + classSize);
+  if (objectives) lines.push("- Learning objectives: " + objectives);
+  if (notes) lines.push("- Other notes: " + notes);
+  lines.push("");
+  lines.push("Please structure the lesson plan with:");
+  lines.push("1. Learning objectives (if not already given above)");
+  lines.push("2. Materials needed (keep this realistic for a school with limited resources)");
+  lines.push("3. Introduction / warm-up activity");
+  lines.push("4. Main teaching activity, step by step");
+  lines.push("5. A short practice or group activity");
+  lines.push("6. A simple way to check what students learned");
+  lines.push("7. Homework or follow-up activity (optional)");
+  lines.push("");
+  lines.push("Keep the language clear and practical for a classroom teacher to use directly.");
+
+  document.getElementById("lp-output").value = lines.join("\n");
+  toolShowOutput("lp-output-wrap");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Generator | Apps | Baimuru Primary School</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="school-crest" aria-hidden="true">BPS</div>
+    <div class="header-text">
+      <h1>Baimuru Primary School</h1>
+      <p>Gulf Province, Papua New Guinea</p>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav" aria-label="Main navigation">
+  <button class="nav-toggle" aria-expanded="false">Menu ☰</button>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="news.html">News</a>
+    <a href="newsletter.html">Newsletter</a>
+    <a href="elibrary.html">E-Library</a>
+    <a href="finance.html">Financial Reports</a>
+    <a href="policies.html">School Policies</a>
+    <a href="downloads.html">Forms &amp; Downloads</a>
+    <a href="apps.html" aria-current="page">Apps</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="wave" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,40 350,0 600,20 C850,40 1050,0 1200,20 L1200,0 L0,0 Z" fill="#0e3320"></path></svg>
+</div>
+
+<main id="main">
+  <div class="container">
+    <p><a href="apps.html">&larr; Apps</a></p>
+    <span class="eyebrow">For Teachers</span>
+    <h2 class="section-title">Test Generator</h2>
+
+    <div class="tool-intro">
+      This tool does not generate the test itself. Fill in the details below, click <strong>Build Prompt</strong>, then copy the text and paste it into an AI assistant such as Claude or ChatGPT to get your draft quiz or test.
+    </div>
+
+    <form class="tool-form" id="tg-form" onsubmit="return false;">
+      <div class="tool-row">
+        <div class="tool-field">
+          <label for="tg-grade">Grade</label>
+          <select id="tg-grade">
+            <option>Grade 3</option>
+            <option>Grade 4</option>
+            <option selected>Grade 5</option>
+            <option>Grade 6</option>
+            <option>Multi-grade</option>
+          </select>
+        </div>
+        <div class="tool-field">
+          <label for="tg-subject">Subject</label>
+          <select id="tg-subject">
+            <option>English</option>
+            <option>Mathematics</option>
+            <option selected>Science</option>
+            <option>Social Science</option>
+            <option>Health</option>
+            <option>General Knowledge</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tool-field">
+        <label for="tg-topic">Topic / Coverage</label>
+        <input id="tg-topic" type="text" placeholder="e.g. Water cycle and weather">
+      </div>
+
+      <div class="tool-row">
+        <div class="tool-field">
+          <label for="tg-numq">Number of Questions</label>
+          <select id="tg-numq">
+            <option>5</option>
+            <option selected>10</option>
+            <option>15</option>
+            <option>20</option>
+          </select>
+        </div>
+        <div class="tool-field">
+          <label for="tg-difficulty">Difficulty</label>
+          <select id="tg-difficulty">
+            <option>Easy</option>
+            <option selected>Mixed (easy to challenging)</option>
+            <option>Challenging</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tool-field">
+        <label for="tg-types">Question Types</label>
+        <select id="tg-types">
+          <option selected>Multiple choice only</option>
+          <option>Short answer only</option>
+          <option>Mix of multiple choice and short answer</option>
+          <option>Mix of multiple choice, short answer, and true/false</option>
+        </select>
+      </div>
+
+      <div class="tool-field">
+        <label for="tg-notes">Other Notes (optional)</label>
+        <textarea id="tg-notes" placeholder="e.g. include an answer key, keep language simple for ESL students"></textarea>
+      </div>
+
+      <div>
+        <button type="button" class="btn btn-primary" onclick="tgBuildPrompt()">Build Prompt</button>
+      </div>
+    </form>
+
+    <div class="tool-output-wrap" id="tg-output-wrap">
+      <h3>Your Prompt</h3>
+      <textarea class="tool-output" id="tg-output" readonly></textarea>
+      <div class="tool-output-actions">
+        <button class="btn btn-outline" id="tg-copy-btn" onclick="toolCopy('tg-output','tg-copy-btn')">Copy Prompt</button>
+      </div>
+
+      <div class="tool-ai-links">
+        <h4>Paste it into an AI assistant</h4>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a>
+          <a class="btn btn-outline" href="https://chat.openai.com" target="_blank" rel="noopener">Open ChatGPT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Baimuru Primary School</h4>
+      <p>Baimuru Station, Kikori District<br>Gulf Province, Papua New Guinea</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="elibrary.html">E-Library</a></p>
+      <p><a href="newsletter.html">Newsletters</a></p>
+      <p><a href="finance.html">Financial Reports</a></p>
+      <p><a href="policies.html">School Policies</a></p>
+      <p><a href="apps.html">Apps</a></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="contact.html">Get in touch</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Baimuru Primary School. All rights reserved.</div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/apps.js"></script>
+<script>
+function tgBuildPrompt() {
+  var grade = document.getElementById("tg-grade").value;
+  var subject = document.getElementById("tg-subject").value;
+  var topic = document.getElementById("tg-topic").value.trim() || "[add your topic]";
+  var numq = document.getElementById("tg-numq").value;
+  var difficulty = document.getElementById("tg-difficulty").value;
+  var types = document.getElementById("tg-types").value;
+  var notes = document.getElementById("tg-notes").value.trim();
+
+  var lines = [];
+  lines.push("You are helping a primary school teacher in Papua New Guinea create a test.");
+  lines.push("");
+  lines.push("Create a test with these details:");
+  lines.push("- Grade: " + grade);
+  lines.push("- Subject: " + subject);
+  lines.push("- Topic / coverage: " + topic);
+  lines.push("- Number of questions: " + numq);
+  lines.push("- Difficulty: " + difficulty);
+  lines.push("- Question types: " + types);
+  if (notes) lines.push("- Other notes: " + notes);
+  lines.push("");
+  lines.push("Please:");
+  lines.push("1. Number each question clearly.");
+  lines.push("2. For multiple choice questions, give 4 answer options labelled A-D.");
+  lines.push("3. Use clear, age-appropriate language for this grade level.");
+  lines.push("4. Include an answer key at the end, separate from the questions.");
+  lines.push("5. Keep questions realistic for a classroom with limited printing resources — avoid needing color or complex diagrams.");
+
+  document.getElementById("tg-output").value = lines.join("\n");
+  toolShowOutput("tg-output-wrap");
+}
+</script>
+</body>
+</html>
